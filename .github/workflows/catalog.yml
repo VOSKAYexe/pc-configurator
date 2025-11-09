@@ -1,5 +1,4 @@
-name: Build PCPP Catalog
-
+name: Build Catalog
 on:
   schedule:
     - cron: "0 3 * * *"
@@ -16,14 +15,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-
-      - name: Build catalog
+      - name: Build
         run: node scripts/build-catalog.mjs
-
-      - name: Commit output
+      - name: Commit
         run: |
           git config user.name "bot"
           git config user.email "bot@example.com"
           git add catalog/*.json || true
-          git commit -m "update catalog" || echo "no changes"
+          git commit -m "update" || echo no
           git push
