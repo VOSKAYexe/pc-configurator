@@ -1,4 +1,4 @@
-name: Build PC Catalog
+name: Build PCPP Catalog
 
 on:
   schedule:
@@ -25,5 +25,5 @@ jobs:
           git config user.name "bot"
           git config user.email "bot@example.com"
           git add catalog/*.json || true
-          git commit -m "Update catalog" || echo "no changes"
+          git commit -m "update catalog" || echo "no changes"
           git push
