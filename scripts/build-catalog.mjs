@@ -1,35 +1,29 @@
 import { mkdir, writeFile } from "node:fs/promises";
-import * as tpu from "./adapters/tpu.mjs";
 import * as pcpp from "./adapters/pcpp.mjs";
 
-async function ensureDir(path) {
-  await mkdir(path, { recursive: true });
-}
+async function ensureDir(p){ await mkdir(p,{recursive:true}); }
 
-async function main() {
+async function main(){
   await ensureDir("./catalog");
 
-  console.log("Téléchargement CPU/GPU (TechPowerUp)...");
-  const cpus = await tpu.fetchCPUs();
-  const gpus = await tpu.fetchGPUs();
-
   console.log("Téléchargement PCPP...");
+
+  const cpu = await pcpp.fetchCPU();
+  const gpu = await pcpp.fetchGPU();
   const motherboards = await pcpp.fetchMotherboards();
-  const memoryKits = await pcpp.fetchMemoryKits();
-  const psus = await pcpp.fetchPSUs();
+  const memory = await pcpp.fetchMemory();
+  const psu = await pcpp.fetchPSU();
   const cases = await pcpp.fetchCases();
   const storage = await pcpp.fetchStorage();
 
-  const datasets = {
-    cpus, gpus, motherboards, memoryKits, psus, cases, storage
-  };
+  const db = { cpu, gpu, motherboards, memory, psu, cases, storage };
 
-  for (const [name, data] of Object.entries(datasets)) {
-    await writeFile(`catalog/${name}.json`, JSON.stringify(data, null, 2));
-    console.log(`${name}.json → OK (${data.length} items)`);
+  for(const [name,data] of Object.entries(db)){
+    await writeFile(`catalog/${name}.json`, JSON.stringify(data,null,2));
+    console.log(`${name}.json OK (${data.length})`);
   }
 
   console.log("Catalogue généré.");
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(e=>{ console.error(e); process.exit(1); });
