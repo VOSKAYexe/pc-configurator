@@ -1,5 +1,8 @@
 name: Build catalog (daily)
 
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: "0 3 * * *"  # tous les jours 03:00 UTC
