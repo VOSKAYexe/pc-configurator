@@ -5,6 +5,9 @@ on:
     - cron: "0 3 * * *"      # tous les jours 03:00 UTC
   workflow_dispatch:
 
+permissions:
+  contents: write   # ← IMPORTANT pour autoriser le push
+
 jobs:
   build:
     runs-on: ubuntu-latest
