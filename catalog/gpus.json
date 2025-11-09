@@ -1,0 +1,18 @@
+[
+  {
+    "id": "gpu1",
+    "brand": "NVIDIA",
+    "model": "RTX 4070",
+    "tdp": 200,
+    "powerConnectors": "12VHPWR",
+    "lengthMm": 244
+  },
+  {
+    "id": "gpu2",
+    "brand": "AMD",
+    "model": "RX 6700 XT",
+    "tdp": 230,
+    "powerConnectors": "2x8-pin",
+    "lengthMm": 267
+  }
+]

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Configurateur PC — Base distante (JSON)</title>
+  <style>
+    body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;background:#0b1020;color:#e5e7eb}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media (min-width: 1000px){ .grid{grid-template-columns:2fr 1fr} }
+    .card{background:#0f172a;border:1px solid #1f2937;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,.25)}
+    .card .header{padding:16px 18px;border-bottom:1px solid #1f2937;display:flex;justify-content:space-between;align-items:center}
+    .card .content{padding:16px 18px}
+    .row{display:grid;grid-template-columns:160px 1fr;gap:10px;align-items:center;padding:10px 0;border-bottom:1px dashed #1f2937}
+    .row:last-child{border-bottom:none}
+    select{width:100%;padding:10px 12px;border-radius:10px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb}
+    .issues{display:flex;flex-direction:column;gap:10px}
+    .issue{padding:10px 12px;border-radius:12px;border:1px solid #1f2937}
+    .error{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.35)}
+    .warn{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.35)}
+    .ok{color:#10b981;font-weight:600}
+    .badge{padding:4px 8px;border-radius:8px;font-size:12px;border:1px solid #1f2937;background:#0b1220}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Configurateur PC — Base distante</h1>
+    <p style="color:#94a3b8">Les composants sont chargés depuis des fichiers JSON générés automatiquement.</p>
+    <div class="badge">URL de données: <span id="base-url">—</span></div>
+    <div class="grid" style="margin-top:12px">
+      <section class="card">
+        <div class="header"><div>Composants</div><div class="badge">Sélection</div></div>
+        <div class="content" id="pickers"></div>
+      </section>
+      <aside class="card">
+        <div class="header"><div>Diagnostic</div><div id="summary" class="badge">—</div></div>
+        <div class="content">
+          <div style="display:flex;justify-content:space-between"><span style="color:#94a3b8">PSU recommandé</span><strong id="psu">—</strong></div>
+          <div style="height:8px"></div>
+          <div id="issues" class="issues"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+<script>
+const CONFIG = {
+  // ⚠️ si vous publiez les JSON sur GitHub (branche "catalog"), mettez l'URL brute ici:
+  // Exemple: "https://raw.githubusercontent.com/<user>/<repo>/catalog"
+  BASE_URL: "./catalog" // en local par défaut
+};
+document.getElementById("base-url").textContent = CONFIG.BASE_URL;
+
+const build = { cpu:null, motherboard:null, memory:null, gpu:null, psu:null, case:null, cooler:null, storage:[] };
+const db = { cpus:[], motherboards:[], memoryKits:[], gpus:[], psus:[], cases:[], coolers:[], storage:[] };
+
+async function loadJSON(name){
+  const r = await fetch(`${CONFIG.BASE_URL}/${name}.json?cache-bust=${Date.now()}`);
+  if(!r.ok) throw new Error("Echec chargement "+name);
+  return r.json();
+}
+async function loadAll(){
+  const names = ["cpus","motherboards","memoryKits","gpus","psus","cases","coolers","storage"];
+  for(const n of names){ db[n] = await loadJSON(n); }
+}
+function estimateWattage(b){
+  const cpu = b.cpu?.tdp ?? 65;
+  const gpu = b.gpu?.tdp ?? 0;
+  const other = 50 + (b.storage?.length||0)*5;
+  const peak = cpu + gpu + other;
+  const recommended = Math.ceil((peak*1.5)/50)*50;
+  return {peak, recommended};
+}
+function checkCompatibility(b){
+  const issues=[];
+  if(b.cpu && b.motherboard && b.cpu.socket !== b.motherboard.socket){
+    issues.push({level:"error", msg:`Socket CPU ${b.cpu.socket} ≠ carte mère ${b.motherboard.socket}`});
+  }
+  if(b.memory && b.motherboard){
+    if(b.memory.type !== b.motherboard.memoryType){
+      issues.push({level:"error", msg:`Mémoire ${b.memory.type} incompatible avec ${b.motherboard.memoryType}`});
+    }
+    if(b.memory.modules > (b.motherboard.memorySlots||0)){
+      issues.push({level:"error", msg:`Kit ${b.memory.modules} barrettes > slots ${b.motherboard.memorySlots}`});
+    }
+    if(b.motherboard.maxMemoryMhz && b.memory.speedMhz > b.motherboard.maxMemoryMhz){
+      issues.push({level:"warn", msg:`RAM ${b.memory.speedMhz} MHz sera limitée à ${b.motherboard.maxMemoryMhz} MHz`});
+    }
+  }
+  if(b.case && b.motherboard){
+    const supported = new Set(String(b.case.supports).split(",").map(s=>s.trim().toUpperCase()));
+    if(!supported.has(String(b.motherboard.formFactor).toUpperCase())){
+      issues.push({level:"error", msg:`Format ${b.motherboard.formFactor} non supporté par le boîtier`});
+    }
+  }
+  if(b.case && b.gpu && b.case.gpuMaxLen && b.gpu.lengthMm && b.gpu.lengthMm > b.case.gpuMaxLen){
+    issues.push({level:"error", msg:`GPU ${b.gpu.lengthMm} mm > limite boîtier ${b.case.gpuMaxLen} mm`});
+  }
+  if(b.case && b.cooler && b.case.coolerMaxH && b.cooler.heightMm && b.cooler.heightMm > b.case.coolerMaxH){
+    issues.push({level:"error", msg:`Ventirad ${b.cooler.heightMm} mm > limite boîtier ${b.case.coolerMaxH} mm`});
+  }
+  if(b.psu){
+    const rec = estimateWattage(b).recommended;
+    if(b.psu.wattage < rec){ issues.push({level:"error", msg:`PSU ${b.psu.wattage} W < recommandé ${rec} W`}); }
+  }
+  if(b.psu && b.gpu?.powerConnectors){
+    const need12 = /12VHPWR/i.test(b.gpu.powerConnectors);
+    const need8  = (b.gpu.powerConnectors.match(/8-pin/gi)||[]).length;
+    if(need12 && (b.psu.hppwr||0) < 1){
+      issues.push({level:"warn", msg:`GPU attend 12VHPWR : prévoir câble natif ou adaptateur`});
+    }
+    if(need8>0 && (b.psu.pcie8||0) < need8){
+      issues.push({level:"error", msg:`GPU demande ${need8}×8‑pin; PSU a ${b.psu.pcie8||0}`});
+    }
+  }
+  if(b.motherboard){
+    const nvme = (b.storage||[]).filter(s=>s.type==="NVMe").length;
+    if(nvme > (b.motherboard.m2Slots||0)){
+      issues.push({level:"warn", msg:`${nvme} NVMe > slots M.2 (${b.motherboard.m2Slots||0})`});
+    }
+    const sata = (b.storage||[]).filter(s=>s.type==="SATA").length;
+    if(sata > (b.motherboard.sataPorts||0)){
+      issues.push({level:"error", msg:`${sata} SATA > ports SATA (${b.motherboard.sataPorts||0})`});
+    }
+  }
+  return issues;
+}
+function el(t,a={},c=[]){const e=document.createElement(t);for(const[k,v]of Object.entries(a)){if(k==="class")e.className=v;else if(k.startsWith("on")&&typeof v==="function")e.addEventListener(k.slice(2),v);else e.setAttribute(k,v)};(Array.isArray(c)?c:[c]).forEach(x=>{if(typeof x==="string")e.appendChild(document.createTextNode(x));else if(x)e.appendChild(x)});return e;}
+function pickerRow(label, list, key, text){
+  const row = el("div",{class:"row"});
+  row.appendChild(el("label",{}, label));
+  const sel = el("select");
+  sel.appendChild(el("option",{value:""},"— Aucun —"));
+  list.forEach(it=> sel.appendChild(el("option",{value:it.id}, text(it))));
+  sel.addEventListener("change", ()=>{ const id=sel.value||null; build[key] = id? list.find(x=>x.id===id):null; refresh(); });
+  row.appendChild(sel);
+  return row;
+}
+function renderPickers(){
+  const root = document.getElementById("pickers"); root.innerHTML="";
+  root.appendChild(pickerRow("CPU", db.cpus, "cpu", i=>`${i.brand} ${i.model} (${i.socket})`));
+  root.appendChild(pickerRow("Carte mère", db.motherboards, "motherboard", i=>`${i.brand} ${i.model} (${i.formFactor} ${i.memoryType})`));
+  root.appendChild(pickerRow("Mémoire", db.memoryKits, "memory", i=>`${i.brand} ${i.model} ${i.type} ${i.modules}×${i.capacityPer}Go`));
+  root.appendChild(pickerRow("GPU", db.gpus, "gpu", i=>`${i.brand} ${i.model} ${i.powerConnectors||""}`));
+  root.appendChild(pickerRow("Boîtier", db.cases, "case", i=>`${i.brand} ${i.model}`));
+  root.appendChild(pickerRow("Alim", db.psus, "psu", i=>`${i.brand} ${i.model} ${i.wattage}W`));
+  root.appendChild(pickerRow("Refroidissement", db.coolers, "cooler", i=>`${i.brand} ${i.model}`));
+  // Stockage (multi) — simple: on prend le premier comme exemple
+  const st = el("div",{class:"row"}); st.appendChild(el("label",{},"Stockage (exemple)"));
+  const sel = el("select"); sel.appendChild(el("option",{value:""},"— Ajouter —"));
+  db.storage.forEach(s=> sel.appendChild(el("option",{value:s.id}, `${s.brand} ${s.model} (${s.type})`)));
+  sel.addEventListener("change",()=>{const id=sel.value; if(!id) return; const it=db.storage.find(x=>x.id===id); build.storage.push(it); sel.value=""; refresh();});
+  const list = el("div",{id:"slist"});
+  st.appendChild(el("div",{}, [sel, list]));
+  document.getElementById("pickers").appendChild(st);
+}
+function refresh(){
+  const issues = checkCompatibility(build);
+  document.getElementById("issues").innerHTML="";
+  const wrap = document.getElementById("issues");
+  if(issues.length===0){ wrap.appendChild(el("div",{class:"ok"},"Aucun problème détecté.")); document.getElementById("summary").textContent="Compatible"; }
+  else{
+    const errs = issues.filter(i=>i.level==="error").length;
+    const warns = issues.filter(i=>i.level==="warn").length;
+    document.getElementById("summary").textContent = `${errs} erreur(s), ${warns} avert.`;
+    issues.forEach(i=> wrap.appendChild(el("div",{class:`issue ${i.level}`}, i.msg)));
+  }
+  const p = estimateWattage(build);
+  document.getElementById("psu").textContent = p.recommended? `${p.recommended} W` : "—";
+  // storage list
+  const sl = document.getElementById("slist"); if(sl){ sl.innerHTML=""; (build.storage||[]).forEach((s,idx)=>{ sl.appendChild(el("div",{class:"badge"}, `${s.brand} ${s.model} (${s.type})`)); }); }
+}
+(async function(){
+  try{
+    await loadAll();
+    renderPickers();
+    refresh();
+  }catch(e){
+    alert("Erreur chargement des catalogues JSON. Ouvrez la console (F12) pour les détails.");
+    console.error(e);
+  }
+})();
+</script>
+</body>
+</html>

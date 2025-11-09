@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ram1",
+    "brand": "Corsair",
+    "model": "Vengeance LPX 2x8",
+    "type": "DDR4",
+    "modules": 2,
+    "capacityPer": 8,
+    "speedMhz": 3200
+  },
+  {
+    "id": "ram2",
+    "brand": "Kingston",
+    "model": "Fury Beast 2x16",
+    "type": "DDR5",
+    "modules": 2,
+    "capacityPer": 16,
+    "speedMhz": 6000
+  }
+]

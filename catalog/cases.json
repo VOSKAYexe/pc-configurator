@@ -1,0 +1,18 @@
+[
+  {
+    "id": "case1",
+    "brand": "NZXT",
+    "model": "H5 Flow",
+    "supports": "ATX,mATX,ITX",
+    "gpuMaxLen": 365,
+    "coolerMaxH": 165
+  },
+  {
+    "id": "case2",
+    "brand": "Cooler Master",
+    "model": "TD300 Mesh",
+    "supports": "mATX,ITX",
+    "gpuMaxLen": 344,
+    "coolerMaxH": 166
+  }
+]
