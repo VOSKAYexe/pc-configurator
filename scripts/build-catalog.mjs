@@ -2,14 +2,11 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import * as p from "./adapters/pcpp_norm.mjs";
 
-async function ensure(dir) { await mkdir(dir, { recursive: true }); }
-async function writeJSON(path, data) {
-  await writeFile(path, JSON.stringify(data, null, 2), "utf-8");
-}
+async function ensure(d){ await mkdir(d,{ recursive:true }); }
 
-async function main() {
+async function main(){
   await ensure("./catalog");
-  console.log("Téléchargement et génération…");
+  console.log("Téléchargement & normalisation (PCPP)…");
 
   const datasets = {
     cpus:         await p.fetchCpus(),
@@ -19,14 +16,14 @@ async function main() {
     psus:         await p.fetchPsus(),
     cases:        await p.fetchCases(),
     coolers:      await p.fetchCoolers(),
-    storage:      await p.fetchStorage()
+    storage:      await p.fetchStorage(),
   };
 
   for (const [name, data] of Object.entries(datasets)) {
-    await writeJSON(`catalog/${name}.json`, data);
-    console.log(`${name}.json -> ${data.length} items`);
+    await writeFile(`catalog/${name}.json`, JSON.stringify(data, null, 2), "utf-8");
+    console.log(`${name}.json → ${data.length} éléments`);
   }
   console.log("OK");
 }
 
-main().catch(err => { console.error(err); process.exit(1); });
+main().catch(e => { console.error(e); process.exit(1); });
