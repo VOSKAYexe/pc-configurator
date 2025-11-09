@@ -1,6 +1,6 @@
 [
   {
-    "id": "ram1",
+    "id": "ram-ddr4-2x8-3200",
     "brand": "Corsair",
     "model": "Vengeance LPX 2x8",
     "type": "DDR4",
@@ -9,7 +9,7 @@
     "speedMhz": 3200
   },
   {
-    "id": "ram2",
+    "id": "ram-ddr5-2x16-6000",
     "brand": "Kingston",
     "model": "Fury Beast 2x16",
     "type": "DDR5",

@@ -1,16 +1,16 @@
 [
   {
-    "id": "cpu1",
-    "brand": "Intel",
-    "model": "Core i5-12400F",
-    "socket": "LGA1700",
-    "tdp": 65
-  },
-  {
-    "id": "cpu2",
+    "id": "cpu-amd-7600",
     "brand": "AMD",
     "model": "Ryzen 5 7600",
     "socket": "AM5",
+    "tdp": 65
+  },
+  {
+    "id": "cpu-intel-12400f",
+    "brand": "Intel",
+    "model": "Core i5-12400F",
+    "socket": "LGA1700",
     "tdp": 65
   }
 ]
