@@ -1,6 +1,5 @@
 import { request } from "node:https";
 
-// Télécharge un CSV depuis PCPartPicker (mirror sans login)
 function downloadCSV(url) {
   return new Promise((resolve, reject) => {
     request(url, res => {
@@ -11,7 +10,6 @@ function downloadCSV(url) {
   });
 }
 
-// Convertit CSV → objets
 function parseCSV(csv) {
   const [headerLine, ...lines] = csv.split(/\r?\n/).filter(Boolean);
   const headers = headerLine.split(",");
@@ -24,11 +22,9 @@ function parseCSV(csv) {
   });
 }
 
-// Motherboards
 export async function fetchMotherboards() {
   const url = "https://raw.githubusercontent.com/jonbrooks/pcpp-data/master/motherboards.csv";
-  const csv = await downloadCSV(url);
-  const rows = parseCSV(csv);
+  const rows = parseCSV(await downloadCSV(url));
 
   return rows.map(r => ({
     id: `mb-${r.Manufacturer}-${r.Model}`.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
@@ -42,11 +38,9 @@ export async function fetchMotherboards() {
   }));
 }
 
-// Memory Kits
 export async function fetchMemoryKits() {
   const url = "https://raw.githubusercontent.com/jonbrooks/pcpp-data/master/memory.csv";
-  const csv = await downloadCSV(url);
-  const rows = parseCSV(csv);
+  const rows = parseCSV(await downloadCSV(url));
 
   return rows.map(r => ({
     id: `ram-${r.Manufacturer}-${r.Model}`.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
@@ -59,11 +53,9 @@ export async function fetchMemoryKits() {
   }));
 }
 
-// Power Supplies
 export async function fetchPSUs() {
   const url = "https://raw.githubusercontent.com/jonbrooks/pcpp-data/master/psus.csv";
-  const csv = await downloadCSV(url);
-  const rows = parseCSV(csv);
+  const rows = parseCSV(await downloadCSV(url));
 
   return rows.map(r => ({
     id: `psu-${r.Manufacturer}-${r.Model}`.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
@@ -74,11 +66,9 @@ export async function fetchPSUs() {
   }));
 }
 
-// Cases
 export async function fetchCases() {
   const url = "https://raw.githubusercontent.com/jonbrooks/pcpp-data/master/cases.csv";
-  const csv = await downloadCSV(url);
-  const rows = parseCSV(csv);
+  const rows = parseCSV(await downloadCSV(url));
 
   return rows.map(r => ({
     id: `case-${r.Manufacturer}-${r.Model}`.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
@@ -89,11 +79,9 @@ export async function fetchCases() {
   }));
 }
 
-// Storage
 export async function fetchStorage() {
   const url = "https://raw.githubusercontent.com/jonbrooks/pcpp-data/master/storage.csv";
-  const csv = await downloadCSV(url);
-  const rows = parseCSV(csv);
+  const rows = parseCSV(await downloadCSV(url));
 
   return rows.map(r => ({
     id: `sto-${r.Manufacturer}-${r.Model}`.toLowerCase().replace(/[^a-z0-9]+/g,"-"),
