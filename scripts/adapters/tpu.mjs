@@ -2,7 +2,6 @@ import { writeFile } from "node:fs/promises";
 import { readFile } from "node:fs/promises";
 import { request } from "node:https";
 
-// Télécharge un JSON depuis TechPowerUp
 function download(url) {
   return new Promise((resolve, reject) => {
     request(url, res => {
@@ -13,7 +12,6 @@ function download(url) {
   });
 }
 
-// CPU TechPowerUp
 export async function fetchCPUs() {
   const api = "https://www.techpowerup.com/cpu-specs/json";
   const raw = await download(api);
@@ -31,7 +29,6 @@ export async function fetchCPUs() {
   }));
 }
 
-// GPU TechPowerUp
 export async function fetchGPUs() {
   const api = "https://www.techpowerup.com/gpu-specs/json";
   const raw = await download(api);
