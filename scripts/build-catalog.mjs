@@ -1,29 +1,25 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import * as pcpp from "./adapters/pcpp.mjs";
 
-async function ensureDir(p){ await mkdir(p,{recursive:true}); }
+async function ensure(p){ await mkdir(p,{recursive:true}); }
 
 async function main(){
-  await ensureDir("./catalog");
+  await ensure("./catalog");
 
-  console.log("Téléchargement PCPP...");
+  const datasets = {
+    cpu: await pcpp.fetchCPU(),
+    gpu: await pcpp.fetchGPU(),
+    motherboards: await pcpp.fetchMotherboards(),
+    memory: await pcpp.fetchMemory(),
+    psu: await pcpp.fetchPSU(),
+    cases: await pcpp.fetchCases(),
+    storage: await pcpp.fetchStorage()
+  };
 
-  const cpu = await pcpp.fetchCPU();
-  const gpu = await pcpp.fetchGPU();
-  const motherboards = await pcpp.fetchMotherboards();
-  const memory = await pcpp.fetchMemory();
-  const psu = await pcpp.fetchPSU();
-  const cases = await pcpp.fetchCases();
-  const storage = await pcpp.fetchStorage();
-
-  const db = { cpu, gpu, motherboards, memory, psu, cases, storage };
-
-  for(const [name,data] of Object.entries(db)){
+  for(const [name,data] of Object.entries(datasets)){
     await writeFile(`catalog/${name}.json`, JSON.stringify(data,null,2));
-    console.log(`${name}.json OK (${data.length})`);
+    console.log(name,"OK",data.length);
   }
-
-  console.log("Catalogue généré.");
 }
 
-main().catch(e=>{ console.error(e); process.exit(1); });
+main().catch(e=>{console.error(e);process.exit(1);});
