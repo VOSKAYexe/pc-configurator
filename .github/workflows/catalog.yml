@@ -1,4 +1,4 @@
-name: Build Catalog (PCPP normalized)
+name: Build catalog (PCPP)
 
 on:
   schedule:
@@ -23,5 +23,5 @@ jobs:
           git config user.name "bot"
           git config user.email "bot@example.com"
           git add catalog/*.json || true
-          git commit -m "Update normalized catalogs" || echo "no changes"
+          git commit -m "Update catalog (PCPP normalized)" || echo "no changes"
           git push
