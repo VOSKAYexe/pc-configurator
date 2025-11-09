@@ -1,14 +1,428 @@
 [
   {
-    "id": "sto-mx500-1tb",
-    "brand": "Crucial",
-    "model": "MX500 1TB",
-    "type": "SATA"
+    "id": "sto-"
   },
   {
-    "id": "sto-980-1tb",
-    "brand": "Samsung",
-    "model": "980 1TB",
-    "type": "NVMe"
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
+  },
+  {
+    "id": "sto-"
   }
 ]

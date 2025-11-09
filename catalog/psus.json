@@ -1,18 +1,428 @@
 [
   {
-    "id": "psu-pp12m-650",
-    "brand": "BeQuiet!",
-    "model": "Pure Power 12 M 650",
-    "wattage": 650,
-    "pcie8": 2,
-    "hppwr": 1
+    "id": "psu-"
   },
   {
-    "id": "psu-rm750e",
-    "brand": "Corsair",
-    "model": "RM750e",
-    "wattage": 750,
-    "pcie8": 2,
-    "hppwr": 1
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
+  },
+  {
+    "id": "psu-"
   }
 ]

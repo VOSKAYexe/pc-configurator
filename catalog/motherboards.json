@@ -1,26 +1,1138 @@
 [
   {
-    "id": "mb-asus-b650m",
-    "brand": "ASUS",
-    "model": "TUF B650M-PLUS",
-    "socket": "AM5",
-    "formFactor": "mATX",
-    "memoryType": "DDR5",
-    "memorySlots": 4,
-    "maxMemoryMhz": 6000,
-    "m2Slots": 2,
-    "sataPorts": 4
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
   },
   {
-    "id": "mb-msi-b660m-a",
-    "brand": "MSI",
-    "model": "PRO B660M-A",
-    "socket": "LGA1700",
-    "formFactor": "mATX",
-    "memoryType": "DDR4",
-    "memorySlots": 4,
-    "maxMemoryMhz": 3200,
-    "m2Slots": 2,
-    "sataPorts": 4
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
+  },
+  {
+    "id": "mb-",
+    "memorySlots": 2,
+    "m2Slots": 0,
+    "sataPorts": 0,
+    "pciex16Slots": 1,
+    "pciex1Slots": 0
   }
 ]

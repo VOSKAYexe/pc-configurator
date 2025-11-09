@@ -1,20 +1,74 @@
 [
   {
-    "id": "ram-ddr4-2x8-3200",
-    "brand": "Corsair",
-    "model": "Vengeance LPX 2x8",
-    "type": "DDR4",
+    "id": "ram-",
     "modules": 2,
     "capacityPer": 8,
-    "speedMhz": 3200
+    "ecc": false
   },
   {
-    "id": "ram-ddr5-2x16-6000",
-    "brand": "Kingston",
-    "model": "Fury Beast 2x16",
-    "type": "DDR5",
+    "id": "ram-",
     "modules": 2,
-    "capacityPer": 16,
-    "speedMhz": 6000
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
+  },
+  {
+    "id": "ram-",
+    "modules": 2,
+    "capacityPer": 8,
+    "ecc": false
   }
 ]
