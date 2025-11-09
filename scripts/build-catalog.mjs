@@ -1,32 +1,38 @@
-import { writeFile, mkdir } from "node:fs/promises";
-import { resolve } from "node:path";
-import * as icecat from "./adapters/icecat.mjs";
+import { mkdir, writeFile } from "node:fs/promises";
+import * as tpu from "./adapters/tpu.mjs";
+import * as pcpp from "./adapters/pcpp.mjs";
 
-async function ensureDir(p){ await mkdir(p, {recursive:true}); }
+async function ensureDir(path) {
+  await mkdir(path, { recursive: true });
+}
 
-async function main(){
-  const outDir = resolve("./catalog");
-  await ensureDir(outDir);
+async function main() {
+  await ensureDir("./catalog");
 
-  console.log("Téléchargement depuis Open ICEcat...");
+  console.log("Téléchargement CPU/GPU (TechPowerUp)...");
+  const cpus = await tpu.fetchCPUs();
+  const gpus = await tpu.fetchGPUs();
+
+  console.log("Téléchargement PCPP (cartes mères, RAM, PSU, boîtiers, stockage)...");
+  const motherboards = await pcpp.fetchMotherboards();
+  const memoryKits = await pcpp.fetchMemoryKits();
+  const psus = await pcpp.fetchPSUs();
+  const cases = await pcpp.fetchCases();
+  const storage = await pcpp.fetchStorage();
+
   const datasets = {
-    cpus:         await icecat.fetchCpus(),
-    motherboards: await icecat.fetchMotherboards(),
-    memoryKits:   await icecat.fetchMemoryKits(),
-    gpus:         await icecat.fetchGpus(),
-    psus:         await icecat.fetchPsus(),
-    cases:        await icecat.fetchCases(),
-    coolers:      await icecat.fetchCoolers(),
-    storage:      await icecat.fetchStorage(),
+    cpus, gpus, motherboards, memoryKits, psus, cases, storage
   };
 
-  for (const [name, arr] of Object.entries(datasets)) {
-    const seen = new Set(); const clean=[];
-    for (const it of (arr||[])) { const k=(it.brand||"")+"|"+(it.model||""); if(seen.has(k)) continue; seen.add(k); clean.push(it); }
-    clean.sort((a,b)=> String(a.brand+a.model).localeCompare(String(b.brand+b.model)));
-    await writeFile(`${outDir}/${name}.json`, JSON.stringify(clean, null, 2), "utf-8");
-    console.log(`→ ${name}.json (${clean.length} items)`);
+  for (const [name, data] of Object.entries(datasets)) {
+    await writeFile(`catalog/${name}.json`, JSON.stringify(data, null, 2));
+    console.log(`${name}.json → OK (${data.length} items)`);
   }
-  console.log("OK");
+
+  console.log("Catalogue généré avec succès.");
 }
-main().catch(e=>{ console.error(e); process.exit(1); });
+
+main().catch(err => {
+  console.error(err);
+  process.exit(1);
+});
