@@ -1,31 +1,51 @@
 // scripts/build-catalog.mjs
-// Build files with the EXACT names your index.html expects.
 
-import { mkdir, writeFile } from "node:fs/promises";
-import * as p from "./adapters/pcpp_norm.mjs";
+import { mapCpu, mapGpu, mapMotherboard, mapMemory, mapPsu, mapCase, mapStorage } from "./adapters/pcpp_norm.mjs";
 
-async function ensure(d){ await mkdir(d,{recursive:true}); }
+const BASE = "https://raw.githubusercontent.com/VOSKAYexe/pc-configurator/main/pcpp/";
 
-async function main(){
-  await ensure("./catalog");
-  console.log("Fetch + normalize (PCPP)…");
-
-  const datasets = {
-    cpus: await p.fetchCpus(),
-    motherboards: await p.fetchMotherboards(),
-    memoryKits: await p.fetchMemoryKits(),
-    gpus: await p.fetchGpus(),
-    psus: await p.fetchPsus(),
-    cases: await p.fetchCases(),
-    coolers: await p.fetchCoolers(),
-    storage: await p.fetchStorage()
-  };
-
-  for(const [name,data] of Object.entries(datasets)){
-    await writeFile(`catalog/${name}.json`, JSON.stringify(data,null,2));
-    console.log(`${name}.json → ${data.length}`);
-  }
-  console.log("Done.");
+async function fetchCSV(url) {
+  const res = await fetch(url);
+  return await res.text();
 }
 
-main().catch(e=>{ console.error(e); process.exit(1); });
+function parseCSV(text) {
+  const lines = text.split("\n");
+  const headers = lines[0].split(",");
+  return lines.slice(1).map(line => {
+    const cols = line.split(",");
+    const obj = {};
+    headers.forEach((h,i)=> obj[h.trim()] = cols[i]?.trim());
+    return obj;
+  });
+}
+
+async function writeJSON(path, data) {
+  await Bun.write(path, JSON.stringify(data, null, 2));
+}
+
+async function build() {
+  console.log("Téléchargement et génération…");
+
+  const files = {
+    cpus:       { url: BASE + "cpus.csv",        map: mapCpu },
+    gpus:       { url: BASE + "gpus.csv",        map: mapGpu },
+    motherboards:{ url: BASE + "motherboards.csv", map: mapMotherboard },
+    memory:     { url: BASE + "memory.csv",      map: mapMemory },
+    psus:       { url: BASE + "psus.csv",        map: mapPsu },
+    cases:      { url: BASE + "cases.csv",       map: mapCase },
+    storage:    { url: BASE + "storage.csv",     map: mapStorage },
+  };
+
+  for (const [name, cfg] of Object.entries(files)) {
+    const csv = await fetchCSV(cfg.url);
+    const rows = parseCSV(csv);
+    const mapped = rows.map(cfg.map);
+    await writeJSON(`catalog/${name}.json`, mapped);
+    console.log(`OK → catalog/${name}.json`);
+  }
+
+  console.log("✅ Catalogue généré !");
+}
+
+build();
