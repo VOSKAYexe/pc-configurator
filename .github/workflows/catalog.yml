@@ -1,12 +1,12 @@
-name: Build catalog (Open ICEcat, daily)
+name: Build PC Catalog
 
 on:
   schedule:
-    - cron: "0 3 * * *"      # tous les jours 03:00 UTC
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write   # ← IMPORTANT pour autoriser le push
+  contents: write
 
 jobs:
   build:
@@ -16,15 +16,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Build catalogs from ICEcat
-        env:
-          ICECAT_USER: ${{ secrets.ICECAT_USER }}
-          ICECAT_PASS: ${{ secrets.ICECAT_PASS }}
+
+      - name: Build catalog
         run: node scripts/build-catalog.mjs
-      - name: Commit catalogs
+
+      - name: Commit output
         run: |
           git config user.name "bot"
           git config user.email "bot@example.com"
           git add catalog/*.json || true
-          git commit -m "Update catalog (ICEcat, CI)" || echo "no changes"
+          git commit -m "Update catalog" || echo "no changes"
           git push
