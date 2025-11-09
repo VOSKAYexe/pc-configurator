@@ -13,7 +13,7 @@ async function main() {
   const cpus = await tpu.fetchCPUs();
   const gpus = await tpu.fetchGPUs();
 
-  console.log("Téléchargement PCPP (cartes mères, RAM, PSU, boîtiers, stockage)...");
+  console.log("Téléchargement PCPP...");
   const motherboards = await pcpp.fetchMotherboards();
   const memoryKits = await pcpp.fetchMemoryKits();
   const psus = await pcpp.fetchPSUs();
@@ -29,10 +29,7 @@ async function main() {
     console.log(`${name}.json → OK (${data.length} items)`);
   }
 
-  console.log("Catalogue généré avec succès.");
+  console.log("Catalogue généré.");
 }
 
-main().catch(err => {
-  console.error(err);
-  process.exit(1);
-});
+main().catch(err => { console.error(err); process.exit(1); });
